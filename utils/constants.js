@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: "Travelix",
-    overview: "This is a great app that lets you filter by the most visited and most popular destinations in the country you're traveling to using Google SERP AI, allowing you to plan your trip accordingly.",
+    overview: "This is a great app that lets you filter by the most visited and most popular destinations in the country you are traveling to using Google SERP AI, allowing you to plan your trip accordingly.",
     stack: ["Vue.js", "Python", "CSS", "JavaScript"],
     link: null,
     repo: "https://github.com/Berkedrms/travel-planner",
