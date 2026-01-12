@@ -600,8 +600,8 @@ export default function Home({ publications }) {
                 </p>
 
                   <p className="text-lg">
-                    Take a look at my work below to see what I&apos;m working
-                    on, and get in touch if you&apos;d like to work together!
+                    Take a look at my work below to see what Im working
+                    on, and get in touch if you would like to work together!
                   </p>
                 </div>
                 <div className="flex w-full h-full mb-4 md:pl-8 md:w-2/5 md:mb-0">
@@ -1159,7 +1159,7 @@ export default function Home({ publications }) {
             <h2 className="text-4xl text-center">Other Projects</h2>
             <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 mx-auto border-0"></hr>
             <p className="mb-16 text-lg text-center">
-              Check out some of the projects I&apos;ve been a part of...
+              Check out some of the projects Ive been a part of...
             </p>
 
             {/* Other Projects Container */}
@@ -1194,8 +1194,8 @@ export default function Home({ publications }) {
             <div className="flex flex-col-reverse w-full md:flex-row">
               <div className="w-full mb-4 md:pl-0 md:mb-0">
                 <p className="text-lg">
-                  I&apos;m currently available to get involved in new projects,
-                  so get in touch if you&apos;d like to work together.
+                  Im currently available to get involved in new projects,
+                  so get in touch if you would like to work together.
                 </p>
                 <p className="text-lg">
                   Email me at{" "}
@@ -1205,7 +1205,7 @@ export default function Home({ publications }) {
                   >
                     berkedurmus15@gmail.com
                   </Link>{" "}
-                  and let&apos;s talk about your project!
+                  and lets talk about your project!
                 </p>
               </div>
             </div>

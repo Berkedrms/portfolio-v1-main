@@ -22,10 +22,12 @@ export default function BlogItem({ post }) {
       <div className="w-auto">
         <Image
           src={post.coverImage}
+          alt={post.title || "Blog cover"}
           layout="responsive"
           width={1080}
           height={567}
         />
+
       </div>
       <div className="flex flex-col px-2 gap-y-1.5">
         <h3 className="mb-0 text-lg">{post.title}</h3>
