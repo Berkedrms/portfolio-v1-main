@@ -574,7 +574,7 @@ export default function Home({ publications }) {
               <div className="flex flex-col-reverse items-start w-full md:flex-row">
                 <div className="flex flex-col w-full md:pr-8 md:w-3/5">
                   <p className="text-lg">
-                  Hi! I’m Berke — a Full-Stack Developer working in the Private Healthcare sector in Istanbul, Turkey.
+                  Hi! Im Berke — a Full-Stack Developer working in the Private Healthcare sector in Istanbul, Turkey.
                   I build internal products and contribute to large-scale hospital systems (HBYS/HIMS).
                 </p>
 
@@ -596,7 +596,7 @@ export default function Home({ publications }) {
                   >
                     Medicana
                   </a>
-                  . Feel free to check my projects below and reach out if you'd like to collaborate.
+                  . Feel free to check my projects below and reach out if you would like to collaborate.
                 </p>
 
                   <p className="text-lg">
@@ -936,7 +936,7 @@ export default function Home({ publications }) {
               <FeaturedProjectCard
                 title={"Vitalis"}
                 status={"Just Launched"}
-                description={`This is a bug tracking and project management website. It's a Mantis/Jira-like website that provides companies with ultra-super productivity by controlling all operational processes and analyzing employees and teams.`}
+                description={`This is a bug tracking and project management website. Its a Mantis/Jira-like website that provides companies with ultra-super productivity by controlling all operational processes and analyzing employees and teams.`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
@@ -1029,7 +1029,7 @@ export default function Home({ publications }) {
               <FeaturedProjectCard
                 title={"GamERA"}
                 status={"Join the waitlist"}
-                description={`This is a game search website that includes reliable websites offering games from platforms like Steam and Epic Games. On this website, you can view and be directed to where the game you're looking for is sold at the cheapest price across various platforms.`}
+                description={`This is a game search website that includes reliable websites offering games from platforms like Steam and Epic Games. On this website, you can view and be directed to where the game you are looking for is sold at the cheapest price across various platforms.`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row-reverse`}
                 imgWidth={"1366"}
