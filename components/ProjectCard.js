@@ -1,5 +1,5 @@
 import React from "react";
-import ExternalLink from "./icons/ExternalLink";
+import ExternalLink from "./icons/Blazor";
 import GitHub from "./icons/GitHub";
 import Button from "./Button";
 

@@ -5,7 +5,7 @@ import SourceButton from "./SourceButton";
 import Image from "next/image";
 
 import GitHub from "./icons/GitHub";
-import ExternalLink from "./icons/ExternalLink";
+import ExternalLink from "./icons/Blazor";
 
 const FeaturedProjectCard = ({
   title,

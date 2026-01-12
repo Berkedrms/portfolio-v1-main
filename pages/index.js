@@ -9,21 +9,29 @@ import Icon from "../components/Icon";
 import Html from "../components/icons/Html";
 import Css from "../components/icons/Css";
 import Javascript from "../components/icons/Javascript";
+import TypeScript from "../components/icons/TypeScript";
 import Tailwind from "../components/icons/Tailwind";
-import Bootstrap from "../components/icons/Bootstrap";
-import Sass from "../components/icons/Sass";
-import ReactJs from "../components/icons/ReactJs";
-import NextJs from "../components/icons/NextJs";
-import NodeJs from "../components/icons/NodeJs";
-import Firebase from "../components/icons/Firebase";
-import Figma from "../components/icons/Figma";
-import Photoshop from "../components/icons/Photoshop";
-import Illustrator from "../components/icons/Illustrator";
-import AfterEffects from "../components/icons/AfterEffects";
-import AdobeXd from "../components/icons/AdobeXd";
-import Supabase from "../components/icons/Supabase";
-import MongoDb from "../components/icons/MongoDb";
-import Express from "../components/icons/Express";
+//import ReactJs from "../components/icons/ReactJs";
+//import NextJs from "../components/icons/NextJs";
+//import Supabase from "../components/icons/Supabase";
+
+import VueJs from "../components/icons/VueJs";
+import Django from "../components/icons/Django";
+import Python from "../components/icons/Python";
+
+import SqlServer from "../components/icons/SQLServer";
+import Pinecone from "../components/icons/Pinecone";
+import Jupyter from "../components/icons/Jupyter";
+
+import Angular from "../components/icons/Angular";
+import Flutter from "../components/icons/Flutter";
+import Swift from "../components/icons/Swift";
+import Kotlin from "../components/icons/Kotlin";
+
+import Unity from "../components/icons/Unity";
+import UnrealEngine from "../components/icons/UnrealEngine";
+
+import Blazor from "../components/icons/Blazor";
 // Project Card
 import ProjectCard from "../components/ProjectCard";
 import GitHubProfile from "../components/icons/GitHubProfile";
@@ -155,17 +163,16 @@ export default function Home({ publications }) {
     return () => window.removeEventListener("scroll", handleScrollBack);
   }, [scrollPosition, scrolling, showHeader]);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () =>
-        setScrolling(window.pageYOffset > 110)
-      );
-    }
+    useEffect(() => {
+    const onScroll = () => setScrolling(window.pageYOffset > 110);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
+    useEffect(() => {
     window.addEventListener("resize", handleResize);
-  });
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     setMounted(true);
@@ -369,7 +376,7 @@ export default function Home({ publications }) {
             {/* Text */}
             <div className="flex items-center ml-4">
               <p className="text-lg font-semibold font-display tracking-tight dark:text-white text-darker mb-0 transition-all duration-150 ease-in-out">
-                Berke Durmus
+                B&Development
               </p>
             </div>
             {/* Nav */}
@@ -531,10 +538,11 @@ export default function Home({ publications }) {
                     eraseSpeed={30}
                     eraseDelay={1500}
                     text={[
-                      "Developer Advocate",
-                      "Full Stack Developer",
-                      "Web Designer",
+                      "Full-Stack Developer",
+                      "AI Enthusiast",
+                      "WEB Designer",
                       "UI/UX Designer",
+                      "Healthcare Operations Specialist",
                     ]}
                   />
                 </h2>
@@ -566,42 +574,31 @@ export default function Home({ publications }) {
               <div className="flex flex-col-reverse items-start w-full md:flex-row">
                 <div className="flex flex-col w-full md:pr-8 md:w-3/5">
                   <p className="text-lg">
-                    Hi! I&apos;m Berke and I&apos;m a Full Stack Developer, designer
-                    and Developer from İstanbul, Turkey.
-                  </p>
-                  <p className="text-lg">
-                    I have developed my skills in website development, mobile application development, and
-                    as a team member in hospital information management systems (HIMS) both as a
-                    freelancer and within corporate structures for over 2 years.
-                  </p>
-                  <p className="text-lg">
-                    After graduating University with a Computer Programming degree, I began
-                    freelancing as a designer, I conducted technical work in robotic installation, software development, and assembly
-                    processes for Siemens S7‑1200 and S7‑1500 PLC systems; and actively participated in
-                    projects related to the initial public offerings (IPOs) of leading industrial companies such
-                    as Siemens a different company and websites for small businesses, using content management
-                    systems like Wordpress, Joomla and Squarespace.
-                  </p>
-                  <p className="text-lg">
-                    In recent years, I&apos;ve been focused on programming,
-                    building a solid frontend stack and also creating frontend-backend project. Exciting
-                    projects that solve real-world problems.
-                  </p>
-                  <p className="text-lg">
-                    Alongside my design and development work, I run a In addition to desktop HIMS and website development, I provide technical support to
-                    hospital staff and the Information Systems Department, while also conducting studies and
-                    implementations focused on artificial intelligence–based solutions.
-                    Company called{" "}
-                    <a
-                      href="https://www.medicana.com.tr/"
-                      target="_blank"
-                      className="underline-link"
-                      rel="noreferrer"
-                    >
-                      Medicana
-                    </a>
-                    , so I like to keep busy!
-                  </p>
+                  Hi! I’m Berke — a Full-Stack Developer working in the Private Healthcare sector in Istanbul, Turkey.
+                  I build internal products and contribute to large-scale hospital systems (HBYS/HIMS).
+                </p>
+
+                <ul className="mt-4 space-y-3 text-lg dark:text-light text-dark">
+                  <li>• Built a Jira/Mantis-like <b>Bug Tracking & Project Management</b> platform with <b>Vue.js (frontend)</b> and <b>Django (backend)</b>.</li>
+                  <li>• Working on <b>HBYS web migration</b> as a team member in a <b>Blazor</b> project built with <b>ABP Studio</b> and <b>C#</b>.</li>
+                  <li>• Experienced with <b>SQL Server</b>, production deployments, and <b>Azure pull request</b> + release workflows.</li>
+                  <li>• Provide technical support to hospital staff while delivering improvements that reduce friction in daily operations.</li>
+                  <li>• Interested in AI-assisted tooling, automation, and developer experience improvements.</li>
+                </ul>
+
+                <p className="text-lg mt-6">
+                  Currently working at{" "}
+                  <a
+                    href="https://www.medicana.com.tr/"
+                    target="_blank"
+                    className="underline-link"
+                    rel="noreferrer"
+                  >
+                    Medicana
+                  </a>
+                  . Feel free to check my projects below and reach out if you'd like to collaborate.
+                </p>
+
                   <p className="text-lg">
                     Take a look at my work below to see what I&apos;m working
                     on, and get in touch if you&apos;d like to work together!
@@ -631,277 +628,295 @@ export default function Home({ publications }) {
 
             {/* Skills icons */}
             <div className="w-full mr-auto grid gap-4 grid-cols-4 sm:grid-cols-4 md:grid-cols-8 mt-4">
-              {/* HTML */}
-              <Icon
-                IconType={Html}
-                title="HTML"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* HTML */}
+            <Icon
+              IconType={Html}
+              title="HTML"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
 
-              {/* CSS */}
-              <Icon
-                IconType={Css}
-                title="CSS"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* CSS */}
+            <Icon
+              IconType={Css}
+              title="CSS"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
 
-              {/* Tailwind */}
-              <Icon
-                IconType={Tailwind}
-                title="Tailwind"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* Tailwind */}
+            <Icon
+              IconType={Tailwind}
+              title="Tailwind"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
 
-              {/* Javascript */}
-              <Icon
-                IconType={Javascript}
-                title="Javascript"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* Javascript */}
+            <Icon
+              IconType={Javascript}
+              title="Javascript"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
 
-              {/* React */}
-              <Icon
-                IconType={ReactJs}
-                title="React"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* TypeScript */}
+            <Icon
+              IconType={TypeScript}
+              title="TypeScript"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
 
-              {/* Next */}
-              <Icon
-                IconType={NextJs}
-                title="Next"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* Vue.js */}
+            <Icon
+              IconType={VueJs}
+              title="Vue.js"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
 
-              {/* Node */}
-              <Icon
-                IconType={NodeJs}
-                title="Node"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* Django */}
+            <Icon
+              IconType={Django}
+              title="Django"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
 
-              {/* Express */}
-              <Icon
-                IconType={Express}
-                title="Express"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* Python */}
+            <Icon
+              IconType={Python}
+              title="Python"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
 
-              {/* Supabase */}
-              <Icon
-                IconType={Supabase}
-                title="Supabase"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* Jupyter */}
+            <Icon
+              IconType={Jupyter}
+              title="Jupyter"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
 
-              {/* MongoDb */}
-              <Icon
-                IconType={MongoDb}
-                title="MongoDb"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* Pinecone */}
+            <Icon
+              IconType={Pinecone}
+              title="Pinecone"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
 
-              {/* Sass */}
-              <Icon
-                IconType={Sass}
-                title="Sass"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* SQL Server */}
+            <Icon
+              IconType={SqlServer}
+              title="SQL Server"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
 
-              {/* Bootstrap */}
-              {/* <Icon
-                IconType={Bootstrap}
-                title="Bootstrap"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              /> */}
+            {/* Angular */}
+            <Icon
+              IconType={Angular}
+              title="Angular"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
 
-              {/* Firebase */}
-              <Icon
-                IconType={Firebase}
-                title="Firebase"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* Flutter */}
+            <Icon
+              IconType={Flutter}
+              title="Flutter"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
 
-              {/* Photoshop */}
-              <Icon
-                IconType={Photoshop}
-                title="Photoshop"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* Swift */}
+            <Icon
+              IconType={Swift}
+              title="Swift"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
 
-              {/* Illustrator */}
-              <Icon
-                IconType={Illustrator}
-                title="Illustrator"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* Kotlin */}
+            <Icon
+              IconType={Kotlin}
+              title="Kotlin"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
+            
+            
 
-              {/* After Effects */}
-              <Icon
-                IconType={AfterEffects}
-                title="After Effects"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* Unity */}
+            <Icon
+              IconType={Unity}
+              title="Unity"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
 
-              {/* Adobe XD */}
-              <Icon
-                IconType={AdobeXd}
-                title="Adobe XD"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
+            {/* Unreal Engine */}
+            <Icon
+              IconType={UnrealEngine}
+              title="Unreal Engine"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
+
+            {/* Blazor */}
+            <Icon
+              IconType={Blazor}
+              title="Blazor"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
             </div>
           </section>
 
@@ -919,21 +934,21 @@ export default function Home({ publications }) {
             <div className="flex flex-col w-full mb-12">
               {/* Project One */}
               <FeaturedProjectCard
-                title={"Smylo"}
-                status={"Join the Waitlist"}
-                description={`Keep your life on track and never miss another important date again`}
+                title={"Vitalis"}
+                status={"Just Launched"}
+                description={`This is a bug tracking and project management website. It's a Mantis/Jira-like website that provides companies with ultra-super productivity by controlling all operational processes and analyzing employees and teams.`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/projects/smylo.png"}
-                liveLink={"https://smylo.co/"}
+                imgSrc={"/projects/Vitalis.png"}
+                liveLink={"http://10.152.0.31:8080/"}
                 repoLink={null}
                 stack={
                   <>
                     <Icon
-                      IconType={Html}
-                      title="HTML"
+                      IconType={VueJs}
+                      title="Vue.js"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -948,8 +963,8 @@ export default function Home({ publications }) {
                     />
 
                     <Icon
-                      IconType={Tailwind}
-                      title="Tailwind"
+                      IconType={Django}
+                      title="Django"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -962,10 +977,9 @@ export default function Home({ publications }) {
                       textTransform={"uppercase"}
                       fixedHeight={"h-auto"}
                     />
-
                     <Icon
-                      IconType={ReactJs}
-                      title="React"
+                      IconType={Css}
+                      title="CSS"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -978,10 +992,9 @@ export default function Home({ publications }) {
                       textTransform={"uppercase"}
                       fixedHeight={"h-auto"}
                     />
-
                     <Icon
-                      IconType={NextJs}
-                      title="Next"
+                      IconType={Python}
+                      title="Python"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -994,10 +1007,9 @@ export default function Home({ publications }) {
                       textTransform={"uppercase"}
                       fixedHeight={"h-auto"}
                     />
-
                     <Icon
-                      IconType={Supabase}
-                      title="Supabase"
+                      IconType={Javascript}
+                      title="Javascript"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -1015,21 +1027,37 @@ export default function Home({ publications }) {
               />
               {/* Project Two */}
               <FeaturedProjectCard
-                title={"Vitalis"}
-                status={"Just Launched"}
-                description={`Find the perfect palette for your next perfect. pick it, preview it and paste it right into your code.`}
+                title={"GamERA"}
+                status={"Join the waitlist"}
+                description={`This is a game search website that includes reliable websites offering games from platforms like Steam and Epic Games. On this website, you can view and be directed to where the game you're looking for is sold at the cheapest price across various platforms.`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row-reverse`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/projects/colorhub.png"}
-                liveLink={"https://colorhub.app/"}
-                repoLink={null}
+                imgSrc={"/projects/gamera.png"}
+                liveLink={null}
+                repoLink={"https://github.com/Berkedrms/game-website"}
                 stack={
                   <>
+
                     <Icon
-                      IconType={Html}
-                      title="HTML"
+                      IconType={TypeScript}
+                      title="TypeScript"
+                      columnSizing={"w-auto"}
+                      width={"w-6"}
+                      height={"h-6"}
+                      flexDirection={"flex-row"}
+                      padding={"p-0"}
+                      titleMargins={"my-0 ml-1"}
+                      titleSize={"text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-3"}
+                      textTransform={"uppercase"}
+                      fixedHeight={"h-auto"}
+                    />
+                    <Icon
+                      IconType={Javascript}
+                      title="Javascript"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -1043,68 +1071,21 @@ export default function Home({ publications }) {
                       fixedHeight={"h-auto"}
                     />
 
-                    <Icon
-                      IconType={Tailwind}
-                      title="Tailwind"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-
-                    <Icon
-                      IconType={ReactJs}
-                      title="React"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-
-                    <Icon
-                      IconType={NextJs}
-                      title="Next"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
                   </>
                 }
               />
               {/* Project Three */}
               <FeaturedProjectCard
-                title={"ProfileMe.dev"}
-                status={"Open Source"}
-                description={`Create an amazing GitHub profile complete with skills icons, stat graphs and more in just a couple of minutes.`}
+                title={"Talently"}
+                status={"Join The Waitlist"}
+                description={`This website uses artificial intelligence to analyze the CVs you upload, taking into account your location and preferences, and lists the most suitable workplaces for you, helping you define your career goals.`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/projects/profileme.png"}
-                liveLink={"https://profileme.dev"}
-                repoLink={"https://github.com/Berkedrms/profileme.dev"}
+                imgSrc={"/projects/Talently.png"}
+                liveLink={null}
+                repoLink={"https://github.com/Berkedrms/company-website"}
                 stack={
                   <>
                     <Icon
@@ -1124,8 +1105,8 @@ export default function Home({ publications }) {
                     />
 
                     <Icon
-                      IconType={Tailwind}
-                      title="Tailwind"
+                      IconType={TypeScript}
+                      title="TypeScript"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -1138,10 +1119,9 @@ export default function Home({ publications }) {
                       textTransform={"uppercase"}
                       fixedHeight={"h-auto"}
                     />
-
                     <Icon
-                      IconType={ReactJs}
-                      title="React"
+                      IconType={Javascript}
+                      title="Javascript"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -1154,10 +1134,9 @@ export default function Home({ publications }) {
                       textTransform={"uppercase"}
                       fixedHeight={"h-auto"}
                     />
-
                     <Icon
-                      IconType={NextJs}
-                      title="Next"
+                      IconType={Css}
+                      title="CSS"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -1170,6 +1149,7 @@ export default function Home({ publications }) {
                       textTransform={"uppercase"}
                       fixedHeight={"h-auto"}
                     />
+                    
                   </>
                 }
               />
