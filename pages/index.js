@@ -574,7 +574,7 @@ export default function Home({ publications }) {
               <div className="flex flex-col-reverse items-start w-full md:flex-row">
                 <div className="flex flex-col w-full md:pr-8 md:w-3/5">
                   <p className="text-lg">
-                  Hi! Im Berke — a Full-Stack Developer working in the Private Healthcare sector in Istanbul, Turkey.
+                  Hi! I&apos;m Berke — a Full-Stack Developer working in the Private Healthcare sector in Istanbul, Turkey.
                   I build internal products and contribute to large-scale hospital systems (HBYS/HIMS).
                 </p>
 
@@ -1159,8 +1159,8 @@ export default function Home({ publications }) {
             <h2 className="text-4xl text-center">Other Projects</h2>
             <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 mx-auto border-0"></hr>
             <p className="mb-16 text-lg text-center">
-              Check out some of the projects Ive been a part of...
-            </p>
+            Check out some of the projects I&apos;ve been a part of...
+          </p>
 
             {/* Other Projects Container */}
             <div className="grid grid-flow-row grid-rows-2 gap-4 grid-col-1 lg:grid-cols-3">
@@ -1205,7 +1205,7 @@ export default function Home({ publications }) {
                   >
                     berkedurmus15@gmail.com
                   </Link>{" "}
-                  and lets talk about your project!
+                  and let&apos;s talk about your project!
                 </p>
               </div>
             </div>
